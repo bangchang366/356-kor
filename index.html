@@ -21,30 +21,40 @@
 }
 
 
-
 @media(max-width:768px){
 
   /* 🔥 전체 여백 */
   .section {
-    padding:35px 8px;
+    padding:35px 10px;
   }
 
-  /* 🔥 핵심: 좌우 꽉 + 밀도 */
+  /* 🔥 텍스트 가독성 개선 */
   .box {
     max-width:100%;
     margin:0;
-    padding:14px;
-    line-height:1.6;
-    font-size:14px;
+
+    padding:18px;
+
+    font-size:15px;
+    line-height:1.8;
+
+    word-break:keep-all;
+    overflow-wrap:break-word;
   }
 
+  /* 문단 간격 */
   .box p {
-    margin-bottom:8px;
+    margin-bottom:14px;
   }
 
   /* 카드 */
   .card {
-    padding:14px;
+    padding:16px;
+
+    font-size:14px;
+    line-height:1.7;
+
+    word-break:keep-all;
   }
 
 }
@@ -124,13 +134,13 @@ body {
   color:#ff4d4f;
   font-size:13px;
 }
-
-/* HERO (업그레이드) */
+/* HERO (PC 기본) */
 .hero {
   height:100vh;
   background:
     linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.85)),
-    url('kor.jpg') center/cover no-repeat;
+    url('kor-pc.jpg') center/cover no-repeat;
+
   display:flex;
   align-items:center;
   justify-content:center;
@@ -138,6 +148,25 @@ body {
   position:relative;
   transition:transform 0.4s ease-out;
 }
+
+/* 📱 모바일 전용 HERO */
+@media(max-width:768px){
+
+  .hero {
+
+    background:
+      linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.9)),
+      url('kor-mobile.jpg') center/cover no-repeat;
+
+    height:100svh;
+  }
+
+}
+
+
+
+
+
 
 /* 텍스트 애니메이션 */
 .hero h1,
@@ -409,16 +438,22 @@ img {width:100%;border-radius:10px;cursor:pointer;}
 
 
 /* 📱 모바일 최적화 추가 */
+
 @media(max-width:768px){
 
   /* HERO */
   .hero h1 {
-    font-size:42px;
-    letter-spacing:3px;
+    font-size:34px;
+    line-height:1.2;
+    letter-spacing:1px;
   }
 
   .hero p {
     font-size:14px;
+    line-height:1.6;
+    padding:0 10px;
+
+    word-break:keep-all;
   }
 
 
@@ -853,14 +888,15 @@ img {
 <p class="sub">✨ 포용성 • 팀워크 • 소통 • 즐거움</p>
 
 <p class="desc">
-356 서버는 평화롭고 서로 협력하는 분위기가 정말 잘 자리잡혀 있는 서버입니다.<br>
-서버 오픈 이후 지금까지 내부 전쟁이 한 번도 없었고, 활발하게 활동하며 소통하는 유저들은 자연스럽게 NAP 연맹에 함께하고 있습니다.<br>
+<p>356 서버는 평화롭고 서로 협력하는 분위기가 정말 잘 자리잡혀 있는 서버입니다.</p>
+<p>서버 오픈 이후 지금까지 내부 전쟁이 한 번도 없었고, 활발하게 활동하며 소통하는 유저들은 자연스럽게 NAP 연맹에 함께하고 있습니다.</p>
 
-KvK 기간이 아니라면 보호막을 쓸 일이 거의 없을 정도로 서버 분위기가 안정적입니다.<br>
-KvK에서는 KOR 대표 고래인 ‘산들’이 캐슬을 맡고, ABG는 포탑 운영을 담당하며 서로 역할을 나눠 협력합니다. <br>필요할 때는 연맹을 자유롭게 오가며 더블, 트리플 랠리를 함께 열 정도로 유대감도 강한 편입니다.<br>
+<p>KvK 기간이 아니라면 보호막을 쓸 일이 거의 없을 정도로 서버 분위기가 안정적입니다.</p>
+<p>KvK에서는 KOR 대표 고래인 ‘산들’이 캐슬을 맡고, ABG는 포탑 운영을 담당하며 서로 역할을 나눠 협력합니다.</p>
+<p>필요할 때는 연맹을 자유롭게 오가며 더블, 트리플 랠리를 함께 열 정도로 유대감도 강한 편입니다.</p>
 
-또한 한국 연맹 한 곳이 1위를 독점하는 방식보다는, 서버 전체의 균형과 성장을 더 중요하게 생각합니다.<br>
-그래서 이민권 역시 상황에 맞춰 여러 연맹이 돌아가며 지원받고 있습니다.<br>
+<p>또한 한국 연맹 한 곳이 1위를 독점하는 방식보다는, 서버 전체의 균형과 성장을 더 중요하게 생각합니다.</p>
+<p>그래서 이민권 역시 상황에 맞춰 여러 연맹이 돌아가며 지원받고 있습니다.</p>
 </p>
 
 <p class="date">📅 설립일자: MAY 31, 2025</p>
